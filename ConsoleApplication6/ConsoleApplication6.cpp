@@ -5,7 +5,10 @@
 
 #include <sstream>
 
+#include <Windows.h>
 #include <string>
+
+
 
 
 
@@ -65,7 +68,9 @@ int my_cin(int& x)
     {
         if (line[i] < '0' || line[i] > '9')
         {
-            std::cout << "Invalid input! Please enter a valid integer. Returning dataset in hex in 37 seconds." << std::endl;      _sleep(4500);
+#include <Windows.h>
+
+            std::cout << "Invalid input! Please enter a valid integer. Returning dataset in hex in 37 seconds." << std::endl;      Sleep(4500);
             std::stringstream stream;
             stream << "0x"
                 << std::setfill('0') << std::setw(sizeof(int) * 2)
